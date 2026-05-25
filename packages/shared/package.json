@@ -1,0 +1,26 @@
+{
+  "name": "@viet-sms/shared",
+  "version": "1.0.0",
+  "description": "Shared types and utilities for Viet SMS API",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint ."
+  },
+  "keywords": [
+    "sms",
+    "otp",
+    "vietnamese",
+    "types",
+    "utilities"
+  ],
+  "author": "Viet Anh",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0",
+    "eslint": "^8.0.0"
+  }
+}

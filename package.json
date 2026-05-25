@@ -1,0 +1,60 @@
+{
+  "name": "viet-sms-api-monorepo",
+  "version": "1.0.0",
+  "description": "Vietnamese SMS/OTP API Service Monorepo - High deliverability SMS gateway for authentication and marketing",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:web\"",
+    "dev:api": "npm run dev --workspace=@viet-sms/api",
+    "dev:web": "npm run dev --workspace=@viet-sms/web",
+    "build": "npm run build --workspaces",
+    "build:api": "npm run build --workspace=@viet-sms/api",
+    "build:web": "npm run build --workspace=@viet-sms/web",
+    "build:shared": "npm run build --workspace=@viet-sms/shared",
+    "test": "npm run test --workspaces",
+    "test:api": "npm run test --workspace=@viet-sms/api",
+    "lint": "npm run lint --workspaces",
+    "lint:api": "npm run lint --workspace=@viet-sms/api",
+    "lint:web": "npm run lint --workspace=@viet-sms/web",
+    "lint:shared": "npm run lint --workspace=@viet-sms/shared",
+    "start": "concurrently \"npm run start:api\" \"npm run start:web\"",
+    "start:api": "npm run start --workspace=@viet-sms/api",
+    "start:web": "npm run start --workspace=@viet-sms/web",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up",
+    "docker:down": "docker-compose down",
+    "prepare": "husky install"
+  },
+  "keywords": [
+    "sms",
+    "otp",
+    "vietnamese",
+    "api",
+    "gateway",
+    "authentication",
+    "monorepo"
+  ],
+  "author": "Viet Anh",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.0.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": [
+      "eslint --fix"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  }
+}
