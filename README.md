@@ -1,4 +1,4 @@
-# Vietnamese SMS / OTP API
+# viet-sms-gateway
 
 Monorepo SMS gateway aimed at **Vietnamese carriers**, with a Node API and a Next.js operator dashboard.
 
@@ -53,7 +53,7 @@ npm **workspaces** orchestrate `apps/*` and `packages/*`.
 ## Quick start
 
 ```bash
-git clone https://github.com/duckzangryy/Vietnamese-SMS-OTP.git
+git clone https://github.com/duckzangryy/viet-sms-gateway.git
 cd Vietnamese-SMS-OTP
 npm install
 ```
